@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo.png" alt="WD Ferragens" width="170">
+<img src="assets/logo-github.png" alt="WD Ferragens" width="360">
 
 # Portal B2B de Pedidos — WD Ferragens
 
@@ -44,7 +44,8 @@ Busca por código, nome ou descrição, filtro por categoria e preço conforme a
 
 ### Produto com cor e acabamento
 Cada ferragem é vendida nas cores Branco, Bronze, Natural fosco e Preto; a cor escolhida acompanha o item
-no carrinho, no pedido e no PDF, com o preço da tabela comercial do cliente.
+no carrinho, no pedido e no PDF, com o preço da tabela comercial do cliente. Cada produto pode ter **várias fotos**
+(galeria com miniaturas, deslizar no celular e clique para ampliar).
 <p align="center"><img src="docs/screenshots/03-produto.jpg" alt="Página do produto" width="860"></p>
 
 ### Carrinho
