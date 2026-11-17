@@ -89,8 +89,9 @@ Faturamento por período, comparação com o período anterior, ticket médio e 
 
 ## Funcionalidades em detalhe
 
-- **Cadastro de empresas** com validação de **CNPJ** (um cadastro por CNPJ), WhatsApp e endereço.
-- **Preços por cliente:** tabela comercial (ex.: Tabela A, Tabela B), **tabela exclusiva** por cliente e **preços especiais** por produto.
+- **Cadastro de empresas** com validação de **CNPJ**, WhatsApp e endereço; **vários vendedores por CNPJ**, cada um com o próprio login,
+  e **aprovação manual** de cada cadastro no painel.
+- **Preços por empresa (CNPJ):** tabela comercial (ex.: Tabela A, Tabela B), **tabela exclusiva** por cliente e **preços especiais** por produto.
   Cliente sem tabela vê "Preço sob consulta" e pode pedir mesmo assim — a equipe cota os itens.
 - **Cores/acabamentos** (Branco, Bronze, Natural fosco e Preto); a cor aparece no carrinho, no pedido, no PDF e nos relatórios.
 - **Importação do catálogo** a partir do PDF oficial (recorte automático das fotos) e da tabela de preços em Excel.
