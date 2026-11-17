@@ -27,8 +27,8 @@ e a WD Ferragens recebe, responde e acompanha tudo por um painel administrativo 
 
 | Para o cliente (revenda) | Para a WD Ferragens (administração) |
 |---|---|
-| Catálogo com **fotos, busca e categorias** | **Painel** com pedidos novos, faturamento do mês e destaques |
-| Escolha de **cor/acabamento** (BC, BZ, NF, PT) | Cadastro de **produtos**, fotos, cores e preços |
+| Catálogo com **várias fotos por produto**, busca e categorias | **Painel** com pedidos novos, faturamento do mês e destaques |
+| Escolha de **cor/acabamento** (BC, BZ, NF, PT) | Cadastro de **produtos**, galeria de fotos, cores e preços |
 | **Preços da tabela comercial** de cada cliente | **Tabelas de preço** por cliente, importação/exportação em **Excel** |
 | Carrinho salvo na conta, com **recálculo instantâneo** | **Clientes**: cadastro, tabela exclusiva, preços especiais, bloqueio |
 | Envio do pedido para orçamento + **envio pelo WhatsApp** com PDF | **Pedidos**: resposta ao orçamento, ajuste de preços, custo e margem |
