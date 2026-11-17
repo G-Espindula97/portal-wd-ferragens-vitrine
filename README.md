@@ -28,7 +28,7 @@ e a WD Ferragens recebe, responde e acompanha tudo por um painel administrativo 
 | Para o cliente (revenda) | Para a WD Ferragens (administração) |
 |---|---|
 | Catálogo com **fotos, busca e categorias** | **Painel** com pedidos novos, faturamento do mês e destaques |
-| Escolha de **cor/acabamento** (BC, BZ, NF, PT, CR) com preço colorido e cromado | Cadastro de **produtos**, fotos, cores e preços |
+| Escolha de **cor/acabamento** (BC, BZ, NF, PT) | Cadastro de **produtos**, fotos, cores e preços |
 | **Preços da tabela comercial** de cada cliente | **Tabelas de preço** por cliente, importação/exportação em **Excel** |
 | Carrinho salvo na conta, com **recálculo instantâneo** | **Clientes**: cadastro, tabela exclusiva, preços especiais, bloqueio |
 | Envio do pedido para orçamento + **envio pelo WhatsApp** com PDF | **Pedidos**: resposta ao orçamento, ajuste de preços, custo e margem |
@@ -43,8 +43,8 @@ Busca por código, nome ou descrição, filtro por categoria e preço conforme a
 <p align="center"><img src="docs/screenshots/02-catalogo.jpg" alt="Catálogo" width="860"></p>
 
 ### Produto com cor e acabamento
-Cada ferragem tem cores (Branco, Bronze, Natural fosco, Preto e Cromado). Cores coloridas usam o preço
-**colorido**; o cromado usa o preço **cromado** — exatamente como na tabela comercial.
+Cada ferragem é vendida nas cores Branco, Bronze, Natural fosco e Preto; a cor escolhida acompanha o item
+no carrinho, no pedido e no PDF, com o preço da tabela comercial do cliente.
 <p align="center"><img src="docs/screenshots/03-produto.jpg" alt="Página do produto" width="860"></p>
 
 ### Carrinho
@@ -76,7 +76,7 @@ A equipe responde o orçamento, ajusta preços, muda a situação e gera o PDF d
 <p align="center"><img src="docs/screenshots/11-admin-pedido.jpg" alt="Pedido no admin" width="860"></p>
 
 ### Tabelas de preço
-Grade de preços colorido/cromado por tabela, preenchimento por markup sobre o custo e importação/exportação em Excel.
+Grade de preços por tabela, preenchimento por markup sobre o custo e importação/exportação em Excel.
 <p align="center"><img src="docs/screenshots/10-tabela-precos.jpg" alt="Tabela de preços" width="860"></p>
 
 ### Relatórios
@@ -91,7 +91,7 @@ Faturamento por período, comparação com o período anterior, ticket médio e 
 - **Cadastro de empresas** com validação de **CNPJ** (um cadastro por CNPJ), WhatsApp e endereço.
 - **Preços por cliente:** tabela comercial (ex.: Tabela A, Tabela B), **tabela exclusiva** por cliente e **preços especiais** por produto.
   Cliente sem tabela vê "Preço sob consulta" e pode pedir mesmo assim — a equipe cota os itens.
-- **Cores/acabamentos** com preço colorido × cromado; a cor aparece no carrinho, no pedido, no PDF e nos relatórios.
+- **Cores/acabamentos** (Branco, Bronze, Natural fosco e Preto); a cor aparece no carrinho, no pedido, no PDF e nos relatórios.
 - **Importação do catálogo** a partir do PDF oficial (recorte automático das fotos) e da tabela de preços em Excel.
 - **Pedidos:** situação (novo, em análise, orçamento enviado, aprovado, cancelado), resposta ao cliente, repetir pedido.
 - **Envio pelo WhatsApp** via link `wa.me` com mensagem pronta e PDF público protegido por código secreto.
@@ -114,7 +114,7 @@ Faturamento por período, comparação com o período anterior, ticket médio e 
 ## Código-fonte
 
 Este repositório é uma **vitrine** do projeto: apresenta as telas e as funcionalidades.
-O **código-fonte é privado** e pertence ao projeto da WD Ferragens — não está disponível para download ou reutilização.
+O **código-fonte é privado** e pertence a **Gabriel Espindula** — não está disponível para download ou reutilização.
 
 ---
 
