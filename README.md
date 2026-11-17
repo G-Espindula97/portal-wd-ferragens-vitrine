@@ -23,7 +23,7 @@ e a WD Ferragens recebe, responde e acompanha tudo por um painel administrativo 
 
 ## Visão geral
 
-<p align="center"><img src="docs/screenshots/01-login.jpg" alt="Tela de login" width="860"></p>
+<p align="center"><img src="docs/telas/01-login.jpg" alt="Tela de login" width="860"></p>
 
 | Para o cliente (revenda) | Para a WD Ferragens (administração) |
 |---|---|
@@ -40,29 +40,29 @@ e a WD Ferragens recebe, responde e acompanha tudo por um painel administrativo 
 
 ### Catálogo
 Busca por código, nome ou descrição, filtro por categoria e preço conforme a tabela do cliente.
-<p align="center"><img src="docs/screenshots/02-catalogo.jpg" alt="Catálogo" width="860"></p>
+<p align="center"><img src="docs/telas/02-catalogo.jpg" alt="Catálogo" width="860"></p>
 
 ### Produto com cor e acabamento
 Cada ferragem é vendida nas cores Branco, Bronze, Natural fosco e Preto; a cor escolhida acompanha o item
 no carrinho, no pedido e no PDF, com o preço da tabela comercial do cliente. Cada produto pode ter **várias fotos**
 (galeria com miniaturas, deslizar no celular e clique para ampliar).
-<p align="center"><img src="docs/screenshots/03-produto.jpg" alt="Página do produto" width="860"></p>
+<p align="center"><img src="docs/telas/03-produto.jpg" alt="Página do produto" width="860"></p>
 
 ### Carrinho
 Quantidade e totais são recalculados **na hora**, e o carrinho é salvo automaticamente na conta do cliente.
-<p align="center"><img src="docs/screenshots/04-carrinho.jpg" alt="Carrinho" width="860"></p>
+<p align="center"><img src="docs/telas/04-carrinho.jpg" alt="Carrinho" width="860"></p>
 
 ### Pedido enviado + WhatsApp
 Ao finalizar, o cliente envia o pedido para a WD Ferragens pelo **WhatsApp** com um clique: a mensagem já
 vai pronta, com o resumo dos itens e um **link seguro do PDF** do pedido.
-<p align="center"><img src="docs/screenshots/05-pedido-whatsapp.jpg" alt="Pedido enviado" width="860"></p>
+<p align="center"><img src="docs/telas/05-pedido-whatsapp.jpg" alt="Pedido enviado" width="860"></p>
 
 ### Pedido em PDF
 Documento pronto para salvar em PDF ou imprimir: quantidade, código, descrição, cor, preço unitário e total.
-<p align="center"><img src="docs/screenshots/06-pdf-pedido.jpg" alt="Pedido em PDF" width="860"></p>
+<p align="center"><img src="docs/telas/06-pdf-pedido.jpg" alt="Pedido em PDF" width="860"></p>
 
 ### Funciona no celular
-<p align="center"><img src="docs/screenshots/12-celular.jpg" alt="Versão celular" width="300"></p>
+<p align="center"><img src="docs/telas/12-celular.jpg" alt="Versão celular" width="300"></p>
 
 ---
 
@@ -70,20 +70,20 @@ Documento pronto para salvar em PDF ou imprimir: quantidade, código, descriçã
 
 ### Painel
 Pedidos novos, clientes, faturamento do mês, produtos mais pedidos e melhores clientes.
-<p align="center"><img src="docs/screenshots/07-admin-painel.jpg" alt="Painel administrativo" width="860"></p>
+<p align="center"><img src="docs/telas/07-admin-painel.jpg" alt="Painel administrativo" width="860"></p>
 
 ### Pedido com custo e margem
 A equipe responde o orçamento, ajusta preços, muda a situação e gera o PDF do cliente ou o PDF interno com custo.
-<p align="center"><img src="docs/screenshots/11-admin-pedido.jpg" alt="Pedido no admin" width="860"></p>
+<p align="center"><img src="docs/telas/11-admin-pedido.jpg" alt="Pedido no admin" width="860"></p>
 
 ### Tabelas de preço
 Grade de preços por tabela, preenchimento por markup sobre o custo e importação/exportação em Excel.
-<p align="center"><img src="docs/screenshots/10-tabela-precos.jpg" alt="Tabela de preços" width="860"></p>
+<p align="center"><img src="docs/telas/10-tabela-precos.jpg" alt="Tabela de preços" width="860"></p>
 
 ### Relatórios
 Faturamento por período, comparação com o período anterior, ticket médio e rankings.
-<p align="center"><img src="docs/screenshots/08-relatorios.jpg" alt="Relatórios" width="860"></p>
-<p align="center"><img src="docs/screenshots/09-relatorios-rankings.jpg" alt="Rankings" width="860"></p>
+<p align="center"><img src="docs/telas/08-relatorios.jpg" alt="Relatórios" width="860"></p>
+<p align="center"><img src="docs/telas/09-relatorios-rankings.jpg" alt="Rankings" width="860"></p>
 
 ---
 
