@@ -81,8 +81,9 @@ cliente, e a equipe da WD é avisada na hora.
 <p align="center"><img src="docs/telas/13-esqueci-senha.jpg" alt="Esqueci minha senha" width="860"></p>
 
 Contra abuso, cada e-mail tem uma **espera crescente entre pedidos: 1 → 5 → 15 → 60 minutos**, guardada no banco de dados
-(continua valendo mesmo se o servidor reiniciar). Sem e-mail configurado o fluxo continua funcionando: a equipe recebe o
-alerta e define a senha nova pelo painel.
+(continua valendo mesmo se o servidor reiniciar). Os e-mails saem da **caixa de e-mail própria da WD Ferragens**
+(domínio wdferragens.com.br) — convites e "Esqueci minha senha" chegam por e-mail. E o **WhatsApp fica sempre como alternativa**:
+a equipe pode mandar o link de nova senha direto no WhatsApp do cliente (veja *Alertas* no painel).
 <p align="center"><img src="docs/telas/14-esqueci-senha-espera.jpg" alt="Espera entre pedidos de nova senha" width="860"></p>
 
 ### Empresa e colaboradores
@@ -91,6 +92,10 @@ e os dados da empresa, mas cada uma tem o **próprio login** e um papel — **ge
 
 **1. Cadastro da empresa.** Quem cadastra um CNPJ novo vira o **gestor** da empresa, e a WD Ferragens aprova a empresa **uma única vez**.
 <p align="center"><img src="docs/telas/22-cadastro-empresa.jpg" alt="Cadastro da empresa" width="860"></p>
+
+O formulário separa os **dados da empresa** da seção **Responsável (gestor da empresa)** — normalmente o dono, um sócio ou o T.I.,
+que depois convida os compradores da equipe.
+<p align="center"><img src="docs/telas/31-cadastro-responsavel.jpg" alt="Seção Responsável (gestor da empresa) no cadastro" width="860"></p>
 
 **2. Pedido de acesso.** Se alguém se cadastra com um CNPJ que já existe, o cadastro vira um **pedido de acesso** à empresa:
 a pessoa é avisada de que o gestor vai aprovar, e o gestor recebe uma **notificação** no site.
@@ -104,8 +109,12 @@ dados da empresa, que valem para todos.
 
 **4. Convite com link — ninguém define a senha de outra pessoa.** Em *Adicionar colaborador*, o gestor informa nome, e-mail,
 WhatsApp e papel. O colaborador recebe um **link para criar a própria senha**, que vale **7 dias** e funciona **uma única vez**.
-Com o e-mail ligado no portal, o link vai por e-mail; sem e-mail, o portal mostra o link com os botões **Copiar link** e
-**Mandar pelo WhatsApp** (mensagem pronta com o login e o link). A WD Ferragens recebe um aviso de cada novo colaborador.
+O link vai **por e-mail** e, **mesmo com o e-mail ligado**, o gestor vê o link com os botões **Copiar link** e
+**Mandar pelo WhatsApp** (mensagem pronta com o login e o link) — útil quando o e-mail cai no spam ou a pessoa prefere o WhatsApp.
+A WD Ferragens recebe um aviso de cada novo colaborador.
+<p align="center"><img src="docs/telas/36-convite-email-e-whatsapp.jpg" alt="Convite enviado por e-mail, com link e WhatsApp" width="860"></p>
+
+Sem e-mail configurado, o convite continua funcionando só com o link e o WhatsApp:
 <p align="center"><img src="docs/telas/26-convite-colaborador.jpg" alt="Convite de colaborador com link e WhatsApp" width="860"></p>
 <p align="center"><img src="docs/telas/27-criar-senha.jpg" alt="Colaborador cria a própria senha" width="860"></p>
 
@@ -151,7 +160,15 @@ Cada ajuste fica no **Histórico de ajustes** do pedido: o que mudou, o motivo, 
 ### Alertas de pedido de nova senha
 Quando um cliente pede nova senha, o menu ganha **Alertas** com contador e o painel abre um **pop-up acessível**
 (foco no primeiro botão, fecha com Esc): *"Pedido de nova senha: comprador — empresa (e-mail), às HH:MM"*, com as ações
-**Enviar link agora**, **Abrir cliente**, **Já resolvi** e **Lembrar daqui a 10 min**. A WD também recebe o aviso no **WhatsApp**.
+**Enviar link por e-mail**, **Enviar link pelo WhatsApp**, **Abrir cliente**, **Já resolvi** e **Lembrar daqui a 10 min**.
+A WD também recebe o aviso no **WhatsApp**.
+<p align="center"><img src="docs/telas/32-alerta-email-whatsapp.jpg" alt="Pop-up de alerta com envio por e-mail ou WhatsApp" width="860"></p>
+
+**Enviar link pelo WhatsApp** gera um link de nova senha que vale **24 horas** e funciona uma vez (os anteriores deixam de valer),
+resolve o alerta e abre o **WhatsApp do cliente** com a mensagem pronta. O mesmo botão fica na página de cada cliente, em *Senha do cliente*.
+<p align="center"><img src="docs/telas/33-link-senha-whatsapp.jpg" alt="Link de nova senha pronto para mandar pelo WhatsApp" width="860"></p>
+
+Pop-up da versão anterior, com e-mail ainda desligado:
 <p align="center"><img src="docs/telas/15-alerta-popup.jpg" alt="Pop-up de alerta no painel" width="860"></p>
 
 A página **Alertas** mostra os pedidos em aberto e o histórico dos resolvidos (quando e por quem). Se o próprio cliente
@@ -162,6 +179,15 @@ troca a senha pelo link, o alerta se resolve sozinho.
 A WD vê todas as pessoas agrupadas por empresa (CNPJ), com o **papel** de cada uma, a tabela, os pedidos e a situação.
 Empresas novas aparecem como **aguardando aprovação**; a WD continua podendo editar qualquer pessoa (inclusive o papel) e bloquear qualquer acesso.
 <p align="center"><img src="docs/telas/30-admin-clientes-empresas.jpg" alt="Clientes por empresa no painel" width="860"></p>
+
+### Tabela de preço da empresa
+A tabela de preço é **do CNPJ**, não de cada pessoa: vale para o gestor e para **todos os colaboradores, atuais e futuros**.
+Na página do cliente, o quadro **Tabela de preço da empresa** mostra a tabela atual (exclusiva ou compartilhada) e tem
+**Vincular à empresa** e, para empresa nova, **Vincular e aprovar empresa** — tudo num clique. Também dá para criar uma tabela
+exclusiva a partir de outra. Aprovar uma empresa sem tabela pede confirmação (ela veria o catálogo sem preços).
+Ao lado, em **Senha do cliente**: enviar o link de nova senha por e-mail (vale 1 h) ou pelo WhatsApp (vale 24 h).
+<p align="center"><img src="docs/telas/34-empresa-tabela-de-preco.jpg" alt="Empresa nova aguardando: quadro Tabela de preço da empresa" width="860"></p>
+<p align="center"><img src="docs/telas/35-empresa-vinculada-aprovada.jpg" alt="Tabela vinculada e empresa aprovada" width="860"></p>
 
 ### Tabelas de preço
 Grade de preços por tabela, preenchimento por markup sobre o custo e importação/exportação em Excel.
@@ -188,7 +214,10 @@ Faturamento por período, comparação com o período anterior, ticket médio e 
   total recalculado, **histórico de ajustes** (o quê, quem, quando) e confirmação extra para pedidos aprovados ou cancelados.
 - **Notificações do cliente** no site, com contador no menu, o que mudou e o motivo; marcadas como lidas ao abrir o pedido.
 - **Recuperação de senha por e-mail:** link de uso único válido por 60 minutos, aviso de senha alterada, mesma resposta
-  para e-mail cadastrado ou não e **espera crescente** (1 → 5 → 15 → 60 min) guardada no banco.
+  para e-mail cadastrado ou não e **espera crescente** (1 → 5 → 15 → 60 min) guardada no banco; e-mails saindo da caixa própria da WD.
+- **WhatsApp como alternativa:** link de nova senha pelo WhatsApp do cliente (24 h, uso único) no alerta e na página do cliente;
+  convite de colaborador sempre com link + "Mandar pelo WhatsApp".
+- **Tabela de preço da empresa (CNPJ):** vincular à empresa ou vincular e aprovar num clique; vale para o gestor e todos os colaboradores.
 - **Alertas para a equipe:** menu Alertas com contador, pop-up no painel com ações rápidas, lembrete em 10 minutos,
   histórico de resolvidos e aviso no WhatsApp.
 - **LGPD:** política de privacidade e termos de uso com aceite registrado, download dos próprios dados e exclusão de conta
