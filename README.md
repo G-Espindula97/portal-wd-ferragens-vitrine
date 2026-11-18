@@ -33,6 +33,8 @@ e a WD Ferragens recebe, responde e acompanha tudo por um painel administrativo 
 | Carrinho salvo na conta, com **recálculo instantâneo** | **Clientes**: cadastro, tabela exclusiva, preços especiais, bloqueio |
 | Envio do pedido para orçamento + **envio pelo WhatsApp** com PDF | **Pedidos**: resposta ao orçamento, ajuste de preços, custo e margem |
 | **Histórico**, repetir pedido e **pedido em PDF** | **Relatórios**: produtos mais vendidos, melhores clientes, cores, categorias |
+| **Notificações** quando a WD ajusta ou responde um pedido | **Ajuste do pedido** já enviado: troca de produto/cor, quantidade, preço, itens |
+| **Esqueci minha senha** com link por e-mail e espera crescente | **Alertas** de pedido de nova senha, com pop-up no painel |
 
 ---
 
@@ -61,6 +63,27 @@ vai pronta, com o resumo dos itens e um **link seguro do PDF** do pedido.
 Documento pronto para salvar em PDF ou imprimir: quantidade, código, descrição, cor, preço unitário e total.
 <p align="center"><img src="docs/telas/06-pdf-pedido.jpg" alt="Pedido em PDF" width="860"></p>
 
+### Notificações: o cliente sabe o que mudou no pedido
+Quando a WD Ferragens ajusta, responde ou muda a situação de um pedido, o cliente recebe uma **notificação no site**:
+o menu ganha o item **Notificações** com um contador, e a página mostra **exatamente o que mudou** (cor, quantidade,
+preço, item trocado, removido ou acrescentado), o **motivo** escrito pela equipe e um atalho para o pedido.
+<p align="center"><img src="docs/telas/20-notificacoes.jpg" alt="Notificações do cliente" width="860"></p>
+
+No próprio pedido aparece o quadro **"Ajustado pela WD Ferragens em …"** com o histórico das mudanças, e os itens e o
+total abaixo já vêm atualizados. Abrir o pedido marca as notificações dele como lidas.
+<p align="center"><img src="docs/telas/21-pedido-ajustado-cliente.jpg" alt="Pedido ajustado visto pelo cliente" width="860"></p>
+
+### Esqueci minha senha
+O cliente informa o e-mail e recebe um **link para criar uma nova senha** (válido por 60 minutos); ao trocar, recebe também
+o aviso "Sua senha foi alterada". A mensagem é **a mesma para e-mail cadastrado ou não**, para o portal não revelar quem é
+cliente, e a equipe da WD é avisada na hora.
+<p align="center"><img src="docs/telas/13-esqueci-senha.jpg" alt="Esqueci minha senha" width="860"></p>
+
+Contra abuso, cada e-mail tem uma **espera crescente entre pedidos: 1 → 5 → 15 → 60 minutos**, guardada no banco de dados
+(continua valendo mesmo se o servidor reiniciar). Sem e-mail configurado o fluxo continua funcionando: a equipe recebe o
+alerta e define a senha nova pelo painel.
+<p align="center"><img src="docs/telas/14-esqueci-senha-espera.jpg" alt="Espera entre pedidos de nova senha" width="860"></p>
+
 ### Funciona no celular
 <p align="center"><img src="docs/telas/12-celular.jpg" alt="Versão celular" width="300"></p>
 
@@ -75,6 +98,33 @@ Pedidos novos, clientes, faturamento do mês, produtos mais pedidos e melhores c
 ### Pedido com custo e margem
 A equipe responde o orçamento, ajusta preços, muda a situação e gera o PDF do cliente ou o PDF interno com custo.
 <p align="center"><img src="docs/telas/11-admin-pedido.jpg" alt="Pedido no admin" width="860"></p>
+
+### Ajustar um pedido já enviado
+Faltou estoque, o cliente pediu por telefone para mudar algo ou a equipe quer dar um desconto? Em **Responder / ajustar pedido**
+a WD altera o pedido depois de enviado, numa única tela:
+- **trocar o produto** (ex.: 3210 → 3211) ou a **cor** (ex.: Preto → Branco), com o preço da tabela do cliente aplicado automaticamente;
+- mudar a **quantidade** (0 remove) e o **preço unitário**, marcar **Remover** ou **acrescentar** novos itens (preço em branco = preço da tabela);
+- escrever o **motivo** que o cliente vai ler, mudar a situação e a resposta (prazo, pagamento, validade).
+
+O pedido nunca fica sem itens (para desistir, usa-se "Cancelado"), e pedido **Aprovado** ou **Cancelado** só muda se o administrador
+marcar uma confirmação extra.
+<p align="center"><img src="docs/telas/17-ajustar-pedido.jpg" alt="Ajustar pedido" width="860"></p>
+
+Ao salvar, o **total, o custo e a margem são recalculados** e o cliente é avisado em Notificações.
+<p align="center"><img src="docs/telas/18-pedido-ajustado-admin.jpg" alt="Pedido ajustado no admin" width="860"></p>
+
+Cada ajuste fica no **Histórico de ajustes** do pedido: o que mudou, o motivo, quem fez e quando.
+<p align="center"><img src="docs/telas/19-historico-ajustes.jpg" alt="Histórico de ajustes" width="860"></p>
+
+### Alertas de pedido de nova senha
+Quando um cliente pede nova senha, o menu ganha **Alertas** com contador e o painel abre um **pop-up acessível**
+(foco no primeiro botão, fecha com Esc): *"Pedido de nova senha: comprador — empresa (e-mail), às HH:MM"*, com as ações
+**Enviar link agora**, **Abrir cliente**, **Já resolvi** e **Lembrar daqui a 10 min**. A WD também recebe o aviso no **WhatsApp**.
+<p align="center"><img src="docs/telas/15-alerta-popup.jpg" alt="Pop-up de alerta no painel" width="860"></p>
+
+A página **Alertas** mostra os pedidos em aberto e o histórico dos resolvidos (quando e por quem). Se o próprio cliente
+troca a senha pelo link, o alerta se resolve sozinho.
+<p align="center"><img src="docs/telas/16-alertas.jpg" alt="Página de alertas" width="860"></p>
 
 ### Tabelas de preço
 Grade de preços por tabela, preenchimento por markup sobre o custo e importação/exportação em Excel.
@@ -96,6 +146,15 @@ Faturamento por período, comparação com o período anterior, ticket médio e 
 - **Cores/acabamentos** (Branco, Bronze, Natural fosco e Preto); a cor aparece no carrinho, no pedido, no PDF e nos relatórios.
 - **Importação do catálogo** a partir do PDF oficial (recorte automático das fotos) e da tabela de preços em Excel.
 - **Pedidos:** situação (novo, em análise, orçamento enviado, aprovado, cancelado), resposta ao cliente, repetir pedido.
+- **Ajuste de pedido pela WD:** trocar produto ou cor, mudar quantidade e preço, remover e acrescentar itens, com motivo;
+  total recalculado, **histórico de ajustes** (o quê, quem, quando) e confirmação extra para pedidos aprovados ou cancelados.
+- **Notificações do cliente** no site, com contador no menu, o que mudou e o motivo; marcadas como lidas ao abrir o pedido.
+- **Recuperação de senha por e-mail:** link de uso único válido por 60 minutos, aviso de senha alterada, mesma resposta
+  para e-mail cadastrado ou não e **espera crescente** (1 → 5 → 15 → 60 min) guardada no banco.
+- **Alertas para a equipe:** menu Alertas com contador, pop-up no painel com ações rápidas, lembrete em 10 minutos,
+  histórico de resolvidos e aviso no WhatsApp.
+- **LGPD:** política de privacidade e termos de uso com aceite registrado, download dos próprios dados e exclusão de conta
+  (dados pessoais anonimizados; pedidos mantidos por obrigação fiscal).
 - **Envio pelo WhatsApp** via link `wa.me` com mensagem pronta e PDF público protegido por código secreto.
 - **Exportação** de pedidos para Excel e **relatórios** com gráficos acessíveis (tooltip e tabela de dados).
 - **Equipe**: vários administradores, troca de senha, dados da empresa editáveis no PDF e no site.
