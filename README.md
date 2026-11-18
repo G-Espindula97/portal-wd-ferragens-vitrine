@@ -35,6 +35,7 @@ e a WD Ferragens recebe, responde e acompanha tudo por um painel administrativo 
 | **Histórico**, repetir pedido e **pedido em PDF** | **Relatórios**: produtos mais vendidos, melhores clientes, cores, categorias |
 | **Notificações** quando a WD ajusta ou responde um pedido | **Ajuste do pedido** já enviado: troca de produto/cor, quantidade, preço, itens |
 | **Esqueci minha senha** com link por e-mail e espera crescente | **Alertas** de pedido de nova senha, com pop-up no painel |
+| **Minha empresa**: o gestor convida e gerencia os colaboradores | Aprovação **uma vez por empresa** e papel de cada pessoa (gestor/comprador) |
 
 ---
 
@@ -84,6 +85,37 @@ Contra abuso, cada e-mail tem uma **espera crescente entre pedidos: 1 → 5 → 
 alerta e define a senha nova pelo painel.
 <p align="center"><img src="docs/telas/14-esqueci-senha-espera.jpg" alt="Espera entre pedidos de nova senha" width="860"></p>
 
+### Empresa e colaboradores
+No portal, **a empresa é o CNPJ**: todas as pessoas da mesma revenda compartilham a tabela de preço, os **preços especiais**
+e os dados da empresa, mas cada uma tem o **próprio login** e um papel — **gestor** (dono ou T.I.) ou **comprador**.
+
+**1. Cadastro da empresa.** Quem cadastra um CNPJ novo vira o **gestor** da empresa, e a WD Ferragens aprova a empresa **uma única vez**.
+<p align="center"><img src="docs/telas/22-cadastro-empresa.jpg" alt="Cadastro da empresa" width="860"></p>
+
+**2. Pedido de acesso.** Se alguém se cadastra com um CNPJ que já existe, o cadastro vira um **pedido de acesso** à empresa:
+a pessoa é avisada de que o gestor vai aprovar, e o gestor recebe uma **notificação** no site.
+<p align="center"><img src="docs/telas/23-pedido-de-acesso.jpg" alt="Pedido de acesso enviado" width="860"></p>
+<p align="center"><img src="docs/telas/24-notificacao-pedido-acesso.jpg" alt="Notificação de pedido de acesso para o gestor" width="860"></p>
+
+**3. Minha empresa.** O gestor tem a página **Minha empresa** (com contador de pedidos de acesso no menu): vê todas as pessoas com
+acesso, **aprova ou recusa** pedidos, **desativa e reativa**, **torna outra pessoa gestor**, **reenvia o acesso** e edita os
+dados da empresa, que valem para todos.
+<p align="center"><img src="docs/telas/25-minha-empresa.jpg" alt="Minha empresa com pedido de acesso pendente" width="860"></p>
+
+**4. Convite com link — ninguém define a senha de outra pessoa.** Em *Adicionar colaborador*, o gestor informa nome, e-mail,
+WhatsApp e papel. O colaborador recebe um **link para criar a própria senha**, que vale **7 dias** e funciona **uma única vez**.
+Com o e-mail ligado no portal, o link vai por e-mail; sem e-mail, o portal mostra o link com os botões **Copiar link** e
+**Mandar pelo WhatsApp** (mensagem pronta com o login e o link). A WD Ferragens recebe um aviso de cada novo colaborador.
+<p align="center"><img src="docs/telas/26-convite-colaborador.jpg" alt="Convite de colaborador com link e WhatsApp" width="860"></p>
+<p align="center"><img src="docs/telas/27-criar-senha.jpg" alt="Colaborador cria a própria senha" width="860"></p>
+
+A equipe da empresa fica assim: gestores e compradores ativos, acessos desativados guardados (os pedidos continuam no histórico)
+e a garantia de que a empresa **sempre tem pelo menos um gestor ativo**.
+<p align="center"><img src="docs/telas/28-minha-empresa-equipe.jpg" alt="Equipe da empresa" width="860"></p>
+
+**5. Pedidos da empresa.** O comprador vê os próprios pedidos; o gestor vê os **pedidos de todas as pessoas** da empresa, com o nome de quem comprou.
+<p align="center"><img src="docs/telas/29-pedidos-da-empresa.jpg" alt="Pedidos da empresa" width="860"></p>
+
 ### Funciona no celular
 <p align="center"><img src="docs/telas/12-celular.jpg" alt="Versão celular" width="300"></p>
 
@@ -126,6 +158,11 @@ A página **Alertas** mostra os pedidos em aberto e o histórico dos resolvidos 
 troca a senha pelo link, o alerta se resolve sozinho.
 <p align="center"><img src="docs/telas/16-alertas.jpg" alt="Página de alertas" width="860"></p>
 
+### Clientes por empresa
+A WD vê todas as pessoas agrupadas por empresa (CNPJ), com o **papel** de cada uma, a tabela, os pedidos e a situação.
+Empresas novas aparecem como **aguardando aprovação**; a WD continua podendo editar qualquer pessoa (inclusive o papel) e bloquear qualquer acesso.
+<p align="center"><img src="docs/telas/30-admin-clientes-empresas.jpg" alt="Clientes por empresa no painel" width="860"></p>
+
 ### Tabelas de preço
 Grade de preços por tabela, preenchimento por markup sobre o custo e importação/exportação em Excel.
 <p align="center"><img src="docs/telas/10-tabela-precos.jpg" alt="Tabela de preços" width="860"></p>
@@ -139,8 +176,9 @@ Faturamento por período, comparação com o período anterior, ticket médio e 
 
 ## Funcionalidades em detalhe
 
-- **Cadastro de empresas** com validação de **CNPJ**, WhatsApp e endereço; **vários vendedores por CNPJ**, cada um com o próprio login,
-  e **aprovação manual** de cada cadastro no painel.
+- **Cadastro de empresas** com validação de **CNPJ**, WhatsApp e endereço; quem cadastra vira **gestor** e a WD aprova a empresa **uma vez**.
+- **Empresa e colaboradores:** várias pessoas por CNPJ, cada uma com o próprio login e papel (gestor ou comprador); o gestor convida
+  (link de 7 dias e uso único, por e-mail ou WhatsApp), aprova pedidos de acesso, desativa/reativa, promove gestor e vê os pedidos de todos.
 - **Preços por empresa (CNPJ):** tabela comercial (ex.: Tabela A, Tabela B), **tabela exclusiva** por cliente e **preços especiais** por produto.
   Cliente sem tabela vê "Preço sob consulta" e pode pedir mesmo assim — a equipe cota os itens.
 - **Cores/acabamentos** (Branco, Bronze, Natural fosco e Preto); a cor aparece no carrinho, no pedido, no PDF e nos relatórios.
