@@ -35,6 +35,7 @@ e a WD Ferragens recebe, responde e acompanha tudo por um painel administrativo 
 | **Histórico**, repetir pedido e **pedido em PDF** | **Relatórios**: produtos mais vendidos, melhores clientes, cores, categorias |
 | **Notificações** quando a WD ajusta ou responde um pedido | **Ajuste do pedido** já enviado: troca de produto/cor, quantidade, preço, itens |
 | **Esqueci minha senha** com link por e-mail e espera crescente | **Alertas** de pedido de nova senha, com pop-up no painel |
+| **Compra em massa** em planilha e **relatórios de compra** do gestor | **PDF do pedido** com o cadastro completo do cliente |
 | **Minha empresa**: o gestor convida e gerencia os colaboradores | Aprovação **uma vez por empresa** e papel de cada pessoa (gestor/comprador) |
 
 ---
@@ -51,6 +52,15 @@ no carrinho, no pedido e no PDF, com o preço da tabela comercial do cliente. Ca
 (galeria com miniaturas, deslizar no celular e clique para ampliar).
 <p align="center"><img src="docs/telas/03-produto.jpg" alt="Página do produto" width="860"></p>
 
+### Compra em massa (planilha)
+Para quem já sabe o que quer: o menu **Compra em massa** mostra **todos os produtos numa planilha, uma linha por cor**, em ordem
+de código (primeiro os numéricos — 1003, 1003 A, 1005… —, depois os demais). O cliente digita as quantidades
+(**Tab** ou **Enter** pula para a próxima linha) e vê **subtotal e total ao vivo**. Há filtro por código/nome,
+**filtro por cor** (Branco, Bronze, Natural fosco, Preto) e "mostrar só os itens com quantidade".
+As quantidades da planilha **são o carrinho**: o que já está no carrinho aparece preenchido, e apagar a quantidade tira o item.
+<p align="center"><img src="docs/telas/37-compra-em-massa.jpg" alt="Compra em massa filtrada por cor" width="860"></p>
+<p align="center"><img src="docs/telas/38-compra-em-massa-itens.jpg" alt="Compra em massa mostrando só os itens com quantidade" width="860"></p>
+
 ### Carrinho
 Quantidade e totais são recalculados **na hora**, e o carrinho é salvo automaticamente na conta do cliente.
 <p align="center"><img src="docs/telas/04-carrinho.jpg" alt="Carrinho" width="860"></p>
@@ -62,7 +72,9 @@ vai pronta, com o resumo dos itens e um **link seguro do PDF** do pedido.
 
 ### Pedido em PDF
 Documento pronto para salvar em PDF ou imprimir: quantidade, código, descrição, cor, preço unitário e total.
-<p align="center"><img src="docs/telas/06-pdf-pedido.jpg" alt="Pedido em PDF" width="860"></p>
+O cabeçalho traz o **cadastro completo** do cliente: empresa, CNPJ, quem fez o pedido, WhatsApp, e-mail, endereço,
+bairro, cidade/UF e CEP — cada pedido guarda uma cópia do endereço como estava no momento da compra.
+<p align="center"><img src="docs/telas/40-pdf-cadastro-completo.jpg" alt="PDF do pedido com cadastro completo" width="860"></p>
 
 ### Notificações: o cliente sabe o que mudou no pedido
 Quando a WD Ferragens ajusta, responde ou muda a situação de um pedido, o cliente recebe uma **notificação no site**:
@@ -124,6 +136,19 @@ e a garantia de que a empresa **sempre tem pelo menos um gestor ativo**.
 
 **5. Pedidos da empresa.** O comprador vê os próprios pedidos; o gestor vê os **pedidos de todas as pessoas** da empresa, com o nome de quem comprou.
 <p align="center"><img src="docs/telas/29-pedidos-da-empresa.jpg" alt="Pedidos da empresa" width="860"></p>
+
+**6. Relatórios de compra do gestor.** Em *Minha empresa → Relatórios de compra*, o gestor acompanha as compras da revenda:
+total comprado, número de pedidos, ticket médio, itens comprados e pedidos em andamento; **compras por mês**;
+**itens mais comprados** (por quantidade, com a cor) e **onde a empresa mais gasta** (por valor); **compras por pessoa**;
+**cores mais compradas**; e os **itens que a empresa compra sempre** (aparecem em mais de um pedido), com atalho para repor
+tudo pela Compra em massa. Períodos de 7/30/90 dias, este mês, este ano, 12 meses ou datas escolhidas; pedidos cancelados não entram.
+<p align="center"><img src="docs/telas/41-relatorios-gestor.jpg" alt="Relatórios de compra do gestor" width="860"></p>
+<p align="center"><img src="docs/telas/42-relatorios-gestor-itens.jpg" alt="Itens mais comprados e onde a empresa mais gasta" width="860"></p>
+<p align="center"><img src="docs/telas/43-relatorios-gestor-recompra.jpg" alt="Itens que a empresa compra sempre" width="860"></p>
+
+**Endereço em campos, com busca de CEP.** Cadastro, Minha empresa e painel usam CEP, rua, número, complemento, bairro,
+cidade e estado; ao digitar o CEP, o endereço é preenchido automaticamente (ViaCEP). O endereço é da empresa e vale para todo o CNPJ.
+<p align="center"><img src="docs/telas/39-cadastro-endereco-cep.jpg" alt="Endereço em campos com busca de CEP" width="860"></p>
 
 ### Funciona no celular
 <p align="center"><img src="docs/telas/12-celular.jpg" alt="Versão celular" width="300"></p>
@@ -218,6 +243,9 @@ Faturamento por período, comparação com o período anterior, ticket médio e 
 - **WhatsApp como alternativa:** link de nova senha pelo WhatsApp do cliente (24 h, uso único) no alerta e na página do cliente;
   convite de colaborador sempre com link + "Mandar pelo WhatsApp".
 - **Tabela de preço da empresa (CNPJ):** vincular à empresa ou vincular e aprovar num clique; vale para o gestor e todos os colaboradores.
+- **Compra em massa:** planilha com todos os produtos, uma linha por cor, ordem numérica, filtros por texto e cor e total ao vivo.
+- **Relatórios de compra do gestor:** totais, compras por mês, itens e cores mais comprados, por pessoa e itens de recompra.
+- **Endereço em campos com busca de CEP** e **PDF do pedido com o cadastro completo** do cliente.
 - **Alertas para a equipe:** menu Alertas com contador, pop-up no painel com ações rápidas, lembrete em 10 minutos,
   histórico de resolvidos e aviso no WhatsApp.
 - **LGPD:** política de privacidade e termos de uso com aceite registrado, download dos próprios dados e exclusão de conta
