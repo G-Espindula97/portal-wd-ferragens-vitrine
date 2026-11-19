@@ -61,9 +61,26 @@ As quantidades da planilha **são o carrinho**: o que já está no carrinho apar
 <p align="center"><img src="docs/telas/37-compra-em-massa.jpg" alt="Compra em massa filtrada por cor" width="860"></p>
 <p align="center"><img src="docs/telas/38-compra-em-massa-itens.jpg" alt="Compra em massa mostrando só os itens com quantidade" width="860"></p>
 
+As **cores ficam na lateral**: um clique filtra a planilha pela cor e cada cor mostra **quantos itens e o total** já digitados.
+O envio sai sempre com **um orçamento por cor** — enviar só a cor escolhida ou tudo de uma vez.
+<p align="center"><img src="docs/telas/46-compra-em-massa-cores.jpg" alt="Compra em massa com as cores na lateral" width="860"></p>
+
+### Importar seu pedido (planilha)
+Quem já tem o pedido pronto numa planilha (**.xlsx** ou **.csv**) envia o arquivo: o portal encontra os itens pelo **código**,
+pega as **quantidades** e a **cor** (no fim do código ou numa coluna própria) e ignora cabeçalho, data e número do pedido.
+<p align="center"><img src="docs/telas/44-importar-pedido.jpg" alt="Importar seu pedido" width="860"></p>
+
+Antes de ir para o carrinho, o cliente **confere tudo**: linhas não reconhecidas aparecem separadas com o motivo,
+itens sem cor pedem a escolha (uma cor para todos ou linha a linha) e dá para desmarcar ou mudar quantidades.
+<p align="center"><img src="docs/telas/45-importar-conferencia.jpg" alt="Conferência do pedido importado" width="860"></p>
+
 ### Carrinho
 Quantidade e totais são recalculados **na hora**, e o carrinho é salvo automaticamente na conta do cliente.
 <p align="center"><img src="docs/telas/04-carrinho.jpg" alt="Carrinho" width="860"></p>
+
+**Orçamento por cor:** o carrinho separa os itens por cor; o cliente envia o orçamento de uma cor e o resto continua salvo
+para o próximo pedido.
+<p align="center"><img src="docs/telas/47-carrinho-por-cor.jpg" alt="Carrinho separado por cor" width="860"></p>
 
 ### Pedido enviado + WhatsApp
 Ao finalizar, o cliente envia o pedido para a WD Ferragens pelo **WhatsApp** com um clique: a mensagem já
@@ -97,6 +114,12 @@ Contra abuso, cada e-mail tem uma **espera crescente entre pedidos: 1 → 5 → 
 (domínio wdferragens.com.br) — convites e "Esqueci minha senha" chegam por e-mail. E o **WhatsApp fica sempre como alternativa**:
 a equipe pode mandar o link de nova senha direto no WhatsApp do cliente (veja *Alertas* no painel).
 <p align="center"><img src="docs/telas/14-esqueci-senha-espera.jpg" alt="Espera entre pedidos de nova senha" width="860"></p>
+
+### Segurança da conta
+O portal **desconecta sozinho depois de 30 minutos sem uso** (o navegador avisa e volta ao login). Em **Minha conta**,
+o botão **Sair de todos os aparelhos** encerra a conta esquecida aberta em outro computador — e trocar a senha também
+desconecta os outros aparelhos.
+<p align="center"><img src="docs/telas/48-conta-aparelhos.jpg" alt="Aparelhos conectados em Minha conta" width="860"></p>
 
 ### Empresa e colaboradores
 No portal, **a empresa é o CNPJ**: todas as pessoas da mesma revenda compartilham a tabela de preço, os **preços especiais**
@@ -243,7 +266,9 @@ Faturamento por período, comparação com o período anterior, ticket médio e 
 - **WhatsApp como alternativa:** link de nova senha pelo WhatsApp do cliente (24 h, uso único) no alerta e na página do cliente;
   convite de colaborador sempre com link + "Mandar pelo WhatsApp".
 - **Tabela de preço da empresa (CNPJ):** vincular à empresa ou vincular e aprovar num clique; vale para o gestor e todos os colaboradores.
-- **Compra em massa:** planilha com todos os produtos, uma linha por cor, ordem numérica, filtros por texto e cor e total ao vivo.
+- **Compra em massa:** planilha com todos os produtos, uma linha por cor, ordem numérica, filtros por texto, cores na lateral
+  (itens e total por cor) e total ao vivo; envio com **um orçamento por cor**, também no carrinho.
+- **Importar seu pedido:** planilha .xlsx/.csv lida pelo código, quantidade e cor, com conferência antes do carrinho.
 - **Relatórios de compra do gestor:** totais, compras por mês, itens e cores mais comprados, por pessoa e itens de recompra.
 - **Endereço em campos com busca de CEP** e **PDF do pedido com o cadastro completo** do cliente.
 - **Alertas para a equipe:** menu Alertas com contador, pop-up no painel com ações rápidas, lembrete em 10 minutos,
@@ -254,7 +279,9 @@ Faturamento por período, comparação com o período anterior, ticket médio e 
 - **Exportação** de pedidos para Excel e **relatórios** com gráficos acessíveis (tooltip e tabela de dados).
 - **Equipe**: vários administradores, troca de senha, dados da empresa editáveis no PDF e no site.
 - **Segurança:** senhas com bcrypt, sessão em cookie assinado (`httpOnly`, `sameSite`, `secure` em produção),
-  escape automático de HTML, proteção contra tentativas repetidas de login e HTTPS.
+  **desconexão após 30 minutos sem uso**, **sair de todos os aparelhos** (e troca de senha derruba as outras sessões),
+  limite de tentativas no login e no cadastro, e-mails enviados **só para endereços cadastrados**, escape automático de HTML,
+  política de segurança de conteúdo (CSP), HTTPS com HSTS, dependências sem falhas conhecidas e backups com acesso restrito.
 
 ## Tecnologia
 
