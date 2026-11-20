@@ -223,6 +223,14 @@ A página **Alertas** mostra os pedidos em aberto e o histórico dos resolvidos 
 troca a senha pelo link, o alerta se resolve sozinho.
 <p align="center"><img src="docs/telas/16-alertas.jpg" alt="Página de alertas" width="860"></p>
 
+### Carrinhos parados: a equipe chama o cliente no WhatsApp
+Quando um cliente coloca produtos no carrinho e **não envia o pedido em 1 dia**, a equipe recebe um aviso no sininho e no painel;
+com **2 dias** o aviso sobe de novo. A página **Carrinhos parados** mostra os itens e o valor do carrinho, com **Chamar no WhatsApp**
+(mensagem pronta) e **Já falei com o cliente**. O aviso fecha sozinho quando o cliente envia o pedido ou esvazia o carrinho.
+<p align="center"><img src="docs/telas/49-carrinhos-parados.jpg" alt="Carrinhos parados com itens, valor e botão do WhatsApp" width="860"></p>
+<p align="center"><img src="docs/telas/50-painel-carrinhos-parados.jpg" alt="Painel com o contador de carrinhos parados" width="860"></p>
+<p align="center"><img src="docs/telas/51-sininho-carrinho-parado.jpg" alt="Sininho com aviso de carrinho parado" width="860"></p>
+
 ### Clientes por empresa
 A WD vê todas as pessoas agrupadas por empresa (CNPJ), com o **papel** de cada uma, a tabela, os pedidos e a situação.
 Empresas novas aparecem como **aguardando aprovação**; a WD continua podendo editar qualquer pessoa (inclusive o papel) e bloquear qualquer acesso.
@@ -271,6 +279,7 @@ Faturamento por período, comparação com o período anterior, ticket médio e 
 - **Importar seu pedido:** planilha .xlsx/.csv lida pelo código, quantidade e cor, com conferência antes do carrinho.
 - **Relatórios de compra do gestor:** totais, compras por mês, itens e cores mais comprados, por pessoa e itens de recompra.
 - **Endereço em campos com busca de CEP** e **PDF do pedido com o cadastro completo** do cliente.
+- **Carrinhos parados:** aviso para a equipe com 1 e 2 dias sem envio, itens e valor do carrinho e WhatsApp com mensagem pronta.
 - **Alertas para a equipe:** menu Alertas com contador, pop-up no painel com ações rápidas, lembrete em 10 minutos,
   histórico de resolvidos e aviso no WhatsApp.
 - **LGPD:** política de privacidade e termos de uso com aceite registrado, download dos próprios dados e exclusão de conta
