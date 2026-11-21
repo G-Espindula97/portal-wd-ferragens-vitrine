@@ -37,6 +37,7 @@ e a WD Ferragens recebe, responde e acompanha tudo por um painel administrativo 
 | **Esqueci minha senha** com link por e-mail e espera crescente | **Alertas** de pedido de nova senha, com pop-up no painel |
 | **Compra em massa** em planilha e **relatórios de compra** do gestor | **PDF do pedido** com o cadastro completo do cliente |
 | **Minha empresa**: o gestor convida e gerencia os colaboradores | Aprovação **uma vez por empresa** e papel de cada pessoa (gestor/comprador) |
+| Pedido lançado **pela equipe** em nome do cliente | **CRM**, **cargos personalizados** e **estoque por setor** (kanban, perdas, erros) |
 
 ---
 
@@ -255,6 +256,47 @@ Faturamento por período, comparação com o período anterior, ticket médio e 
 <p align="center"><img src="docs/telas/09-relatorios-rankings.jpg" alt="Rankings" width="860"></p>
 
 ---
+
+### CRM: a equipe acompanha cada cliente
+O **CRM** organiza o dia da equipe comercial: quem ligar **hoje**, os **próximos contatos**, a lista de **clientes** com o último pedido,
+quem ainda está **sem tabela de preço** e o **histórico** de cada conversa. Cada empresa tem a sua ficha com contatos, pedidos e anotações.
+<p align="center"><img src="docs/telas/52-crm-hoje.jpg" alt="CRM: contatos de hoje" width="860"></p>
+<p align="center"><img src="docs/telas/55-crm-empresa.jpg" alt="Ficha da empresa no CRM" width="860"></p>
+<p align="center"><img src="docs/telas/54-crm-clientes.jpg" alt="CRM: lista de clientes" width="860"></p>
+<p align="center"><img src="docs/telas/58-crm-painel-sininho.jpg" alt="Painel com avisos do CRM no sininho" width="860"></p>
+
+### Lançar pedido pela equipe
+O vendedor lança o pedido **pelo cliente**: escolhe a empresa e monta a lista com os preços da tabela dela,
+ou **importa a planilha** que o cliente mandou.
+<p align="center"><img src="docs/telas/59-lancar-pedido-equipe.jpg" alt="Lançar pedido para um cliente" width="860"></p>
+
+### Cargos personalizados
+Cada cargo (gestor, vendedor, controlador de estoque, compras, expedição…) tem **as suas telas**.
+A tabela mostra quem vê o quê, e dá para **criar, editar e excluir cargos** direto na tela.
+<p align="center"><img src="docs/telas/60-equipe-cargos.jpg" alt="Telas de cada cargo e equipe" width="860"></p>
+<p align="center"><img src="docs/telas/61-cargo-personalizado.jpg" alt="Criar um cargo personalizado" width="860"></p>
+
+### Estoque por setor
+Saldos por **setor** (polimento, pintura, estoque…), com as cores do **kanban** (abaixo do mínimo, da média, acima do máximo).
+<p align="center"><img src="docs/telas/62-estoque-saldos.jpg" alt="Saldos de estoque por setor" width="860"></p>
+
+**Lançar** produção, transferência, perda ou contagem digitando códigos e quantidades — com conferência antes de gravar.
+Perda exige explicação; transferências e ajustes de líderes viram **solicitações** para aprovação.
+<p align="center"><img src="docs/telas/63-estoque-lancar.jpg" alt="Lançar movimento de estoque" width="860"></p>
+<p align="center"><img src="docs/telas/64-estoque-solicitacoes.jpg" alt="Solicitações aguardando aprovação" width="860"></p>
+
+**Kanban** com mínimo, média e máximo por setor, relatório de **perdas** com o motivo e o histórico de **movimentos**.
+<p align="center"><img src="docs/telas/65-estoque-kanban.jpg" alt="Kanban de estoque" width="860"></p>
+<p align="center"><img src="docs/telas/66-estoque-perdas.jpg" alt="Relatório de perdas" width="860"></p>
+<p align="center"><img src="docs/telas/68-estoque-movimentos.jpg" alt="Movimentos de estoque" width="860"></p>
+
+**Erros de estoque**: quando um pedido é separado sem saldo, o portal **corrige sozinho** e registra o erro
+para conferência — com link para o pedido e para o lançamento da correção.
+<p align="center"><img src="docs/telas/67-estoque-erros.jpg" alt="Erros de estoque com a correção automática" width="860"></p>
+<p align="center"><img src="docs/telas/69-estoque-setores.jpg" alt="Setores e líderes" width="860"></p>
+
+No **celular**, as tabelas viram cartões — nada de arrastar a tela para o lado.
+<p align="center"><img src="docs/telas/70-estoque-celular.jpg" alt="Estoque no celular" width="360"></p>
 
 ## Funcionalidades em detalhe
 
